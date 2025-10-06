@@ -11,8 +11,8 @@ initial-scale=1.0">
 
 <body>
   <header>
-    <h1>Tu Nombre</h1>
-    <p>Tu Cargo | Tu Email | Tu Teléfono</p>
+    <h1>Danna Ayala</h1>
+    <p>Estudiante | danaayal@espol.edu.ec </p>
   </header>
   <nav>
     <ul>
@@ -21,9 +21,15 @@ initial-scale=1.0">
       <li><a href="#educacion">Educación</a></li>
       <li><a href="#habilidades">Habilidades</a></li>
       <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#testimonios">Testimonios</a></li>
     </ul>
   </nav>
   <main>
+    <section>
+      <h2>Foto de perfil</h2>
+      <img src="https://picsum.photos/300/300" alt="Foto de perfil de Danna Ayala" width="300" height="300">
+    </section>
+
     <section id="resumen">
       <h2>Resumen</h2>
       <p>Breve descripción de tus habilidades y experiencia.</p>
@@ -33,19 +39,142 @@ initial-scale=1.0">
     </section>
     <section id="educacion">
       <h2>Educación</h2>
+      <ol>
+        <li>Graduada del Bachillerato Internacional en COPOL (2023)</li>
+        <li>Estudiante de Ingeniería en Computación en ESPOL (2023–Presente)</li>
+      </ol>
+
     </section>
     <section id="habilidades">
       <h2>Habilidades</h2>
+      <ul>
+        <li>Python y visualización de datos con matplotlib/seaborn</li>
+        <li>HTML semántico y desarrollo web accesible</li>
+      </ul>
+
     </section>
     <section id="proyectos">
       <h2>Proyectos</h2>
+      <table align="center">
+        <thead>
+          <tr>
+            <th>Proyecto</th>
+            <th>Herramientas</th>
+            <th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dashboard de Spotify</td>
+            <td>Python, API, matplotlib</td>
+            <td>Visualización de datos musicales con múltiples paneles</td>
+          </tr>
+          <tr>
+            <td>Guía HTML para principiantes</td>
+            <td>HTML5, CSS</td>
+            <td>Material educativo para compañeros de clase</td>
+          </tr>
+          <tr>
+            <td>Formulario de contacto profesional</td>
+            <td>HTML, JavaScript</td>
+            <td>Diseñado para facilitar el contacto con reclutadores</td>
+          </tr>
+        </tbody>
+      </table>
+
     </section>
+    <section id="testimonios">
+      <h2>Testimonios</h2>
+
+      <article>
+        <blockquote>
+          “Danna es una profesional excepcional, siempre dispuesta a colaborar y aportar soluciones creativas.”
+        </blockquote>
+        <footer>
+          <h3>María Fernanda López</h3>
+          <p>Gerente de Proyectos en TechNova Solutions. Trabajó con Danna en el desarrollo de una plataforma web
+            educativa, destacando su capacidad para adaptarse rápidamente y su excelente comunicación con el equipo.</p>
+        </footer>
+      </article>
+
+      <article>
+        <blockquote>
+          “Su atención al detalle y compromiso con la calidad hacen que trabajar con ella sea un verdadero placer.”
+        </blockquote>
+        <footer>
+          <h3>Carlos Jiménez</h3>
+          <p>Diseñador UX en Creativa Studio. Colaboró con Danna en la creación de dashboards interactivos para clientes
+            internacionales, resaltando su habilidad para traducir requerimientos técnicos en soluciones intuitivas.</p>
+        </footer>
+      </article>
+
+      <article>
+        <blockquote>
+          “Danna tiene una energía contagiosa y una ética de trabajo admirable. Siempre supera las expectativas.”
+        </blockquote>
+        <footer>
+          <h3>Lucía Torres</h3>
+          <p>Coordinadora de Voluntariado en Fundación Conecta. Danna participó en proyectos comunitarios de desarrollo
+            web, demostrando empatía, liderazgo y una gran capacidad para enseñar a otros.</p>
+        </footer>
+      </article>
+
+    </section>
+    <section>
+      <h2>Presentación en video</h2>
+      <p>Conoce más sobre mi experiencia y motivación profesional.</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="Video de presentación de Danna Ayala" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </section>
+    <section>
+      <h2>Formulario de contacto</h2>
+
+      <form action="/enviar" method="post">
+
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="motivo">Motivo de contacto:</label>
+        <select id="motivo" name="motivo">
+          <option value="entrevista">Entrevista laboral</option>
+          <option value="colaboracion">Colaboración en proyecto</option>
+          <option value="consulta">Consulta general</option>
+        </select>
+
+        <fieldset>
+          <legend>¿Cómo prefieres que te contacte?</legend>
+          <label><input type="radio" name="contacto" value="email" checked> Email</label>
+          <label><input type="radio" name="contacto" value="telefono"> Teléfono</label>
+          <label><input type="radio" name="contacto" value="whatsapp"> WhatsApp</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Áreas de interés:</legend>
+          <label><input type="checkbox" name="intereses" value="desarrollo"> Desarrollo web</label>
+          <label><input type="checkbox" name="intereses" value="visualizacion"> Visualización de datos</label>
+          <label><input type="checkbox" name="intereses" value="educacion"> Educación tecnológica</label>
+        </fieldset>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" cols="40" placeholder="Escribe tu mensaje aquí..."></textarea>
+
+        <button type="submit">Enviar formulario</button>
+
+      </form>
+    </section>
+
+
+
+
   </main>
   <footer>
-    <p>© Tu Nombre - 2023</p>
+    <p>© Danna Ayala - 2025</p>
     <ul>
       <li><a href="https://www.linkedin.com/in/tunombre">LinkedIn</a></li>
-      <li><a href="https://github.com/tunombre">GitHub</a></li>
+      <li><a href="https://github.com/ayaladanna04">GitHub</a></li>
     </ul>
   </footer>
 </body>
