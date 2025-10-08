@@ -1,0 +1,78 @@
+/* Selector para aplicar la fuente Segoe UI a todos los elementos */
+* {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== TUS COLORES ===== */
+:root {
+    --color-azure: #D9E9E9;
+    --color-french-gray: #B6BBBF;
+    --color-walnut-brown: #58514D;
+}
+
+/* ===== ESTILOS PARA TÍTULOS ===== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: var(--color-walnut-brown);
+}
+
+h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--color-walnut-brown), var(--color-french-gray));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--color-azure);
+    padding-bottom: 0.5rem;
+    margin: 2rem 0 1rem 0;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: var(--color-walnut-brown);
+    margin-bottom: 0.5rem;
+}
+
+/* ===== SELECTOR POR ID PARA LA FOTO ===== */
+#photo {
+    width: 8vw;           /* Ancho del 8% del viewport width */
+    height: auto;         /* Alto automático para mantener proporción */
+}
+
+/* ===== SELECTOR POR CLASE PARA SUBTÍTULOS ===== */
+.subtitle {
+    color: rgb(151 156 165 / 0.89);  /* Color con transparencia */
+    text-transform: uppercase;       /* Texto en mayúsculas */
+}
+
+nav > ul {
+
+    /* Eliminar los estilos de lista predeterminados */
+    list-style: none;
+
+}
+
+section {
+
+    /* borde de grosor 0.2 en puntos, estilo sólido y color hexadecimal #cedddd  */
+    border: 0.2pt solid #cedddd;
+
+    /* margen (espacio externo) superior, derecho, abajo e izquierda */
+    margin: 4px 2px 8px 2px;
+
+    /* relleno (espacio interno) de
+    1.5% en la parte superior e inferior y
+    0.8% a los lados derecho e izquierdo. */
+
+    padding: 1.5% 0.8%;
+
+    /* Margen inferior ajustado */
+    margin-bottom: 1.2rem;
+
+}
