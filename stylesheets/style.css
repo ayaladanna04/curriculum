@@ -51,15 +51,38 @@ h3 {
     text-transform: uppercase;       /* Texto en mayúsculas */
 }
 
+/* ===== ESTILOS PARA EL MENÚ DE NAVEGACIÓN ===== */
 nav > ul {
-
     /* Eliminar los estilos de lista predeterminados */
     list-style: none;
+    
+    /* Flexbox properties */
+    display: flex;                    /* Activar Flexbox */
+    justify-content: space-between;   /* Distribuir espacio equitativamente */
+    flex-direction: row;              /* Fila horizontal izquierda-derecha */
+    align-items: center;              /* Centrar verticalmente */
+    gap: 1rem;                       /* Espacio de 1rem entre elementos */
+    
+    /* Estilos adicionales para mejor presentación */
+    padding: 0;
+    margin: 0;
+}
 
+/* Estilos opcionales para los enlaces del menú */
+nav > ul li a {
+    text-decoration: none;
+    color: var(--color-walnut-brown);
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav > ul li a:hover {
+    background-color: var(--color-azure);
+    border-radius: 4px;
 }
 
 section {
-
     /* borde de grosor 0.2 en puntos, estilo sólido y color hexadecimal #cedddd  */
     border: 0.2pt solid #cedddd;
 
@@ -74,5 +97,76 @@ section {
 
     /* Margen inferior ajustado */
     margin-bottom: 1.2rem;
+}
 
+/* ===== ESTILOS PARA EL FORMULARIO CON CSS GRID ===== */
+section form {
+    /* Activar el modelo de diseño grid */
+    display: grid;
+    
+    /* Estructura de una sola columna que ocupa todo el ancho disponible */
+    grid-template-columns: 1fr;
+    
+    /* Espacio uniforme de 1rem entre filas y columnas */
+    gap: 1rem;
+}
+
+/* ===== ESTILOS PARA LA SECCIÓN DE TESTIMONIOS CON CSS GRID ===== */
+#testimonios {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+#testimonios > h2 {
+    grid-column: 1 / -1;
+}
+
+#testimonios > article {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos opcionales para mejorar la apariencia del formulario */
+section form label {
+    font-weight: 500;
+    color: var(--color-walnut-brown);
+    margin-bottom: 0.25rem;
+}
+
+section form input,
+section form select,
+section form textarea {
+    padding: 0.5rem;
+    border: 1px solid var(--color-french-gray);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+section form fieldset {
+    border: 1px solid var(--color-french-gray);
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 0;
+}
+
+section form fieldset legend {
+    font-weight: 500;
+    color: var(--color-walnut-brown);
+    padding: 0 0.5rem;
+}
+
+section form button {
+    background-color: var(--color-walnut-brown);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+section form button:hover {
+    background-color: var(--color-french-gray);
 }
