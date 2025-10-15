@@ -3,16 +3,18 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,
-initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Currículum Vitae</title>
   <link rel="stylesheet" href="stylesheets/style.css">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 
 <body>
+
   <header>
     <h1>Danna Ayala</h1>
-    <p>Estudiante | danaayal@espol.edu.ec </p>
+    <p>Estudiante de Ing. Computación | danaayal@espol.edu.ec </p>
   </header>
   <nav>
     <ul>
@@ -27,7 +29,6 @@ initial-scale=1.0">
   <main>
     <section>
       <h2>Foto de perfil</h2>
-      <img id="photo" src="https://picsum.photos/300/300" alt="Foto de perfil de Danna Ayala">
     </section>
 
     <section id="resumen">
@@ -36,6 +37,12 @@ initial-scale=1.0">
     </section>
     <section id="experiencia">
       <h2>Experiencia</h2>
+      <ul>
+        <li>Cursando programa de análisis de datos e IA</li>
+      </ul>
+      <p>Para más información sobre este curso, puedes visitar el <a
+          href="https://www.bing.com/ck/a?!&&p=23c80350938833a22df6eb3525733e904e0aeaf4dc24f3873e49128bbe3e2915JmltdHM9MTc2MDQwMDAwMA&ptn=3&ver=2&hsh=4&fclid=3c8a8407-84ae-62dd-2fe1-91f585b263b8&psq=sic+samsung&u=a1aHR0cHM6Ly9zaWMuZWRjLm9yZy8"
+          target="_blank"> SIC</a> donde encontrarás documentación actualizada del curso.</p>
     </section>
     <section id="educacion">
       <h2>Educación</h2>
@@ -43,7 +50,6 @@ initial-scale=1.0">
         <li>Graduada del Bachillerato Internacional en COPOL (2023)</li>
         <li>Estudiante de Ingeniería en Computación en ESPOL (2023–Presente)</li>
       </ol>
-
     </section>
     <section id="habilidades">
       <h2>Habilidades</h2>
@@ -51,7 +57,6 @@ initial-scale=1.0">
         <li>Python y visualización de datos con matplotlib/seaborn</li>
         <li>HTML semántico y desarrollo web accesible</li>
       </ul>
-
     </section>
     <section id="proyectos">
       <h2>Proyectos</h2>
@@ -81,11 +86,9 @@ initial-scale=1.0">
           </tr>
         </tbody>
       </table>
-
     </section>
     <section id="testimonios">
       <h2>Testimonios</h2>
-
       <article>
         <blockquote>
           “Danna es una profesional excepcional, siempre dispuesta a colaborar y aportar soluciones creativas.”
@@ -93,10 +96,9 @@ initial-scale=1.0">
         <footer>
           <h3>María Fernanda López</h3>
           <p>Gerente de Proyectos en TechNova Solutions. Trabajó con Danna en el desarrollo de una plataforma web
-            educativa, destacando su capacidad para adaptarse rápidamente y su excelente comunicación con el equipo.</p>
+            educativa, destacando su capacidad para adaptarse ráticamente y su excelente comunicación con el equipo.</p>
         </footer>
       </article>
-
       <article>
         <blockquote>
           “Su atención al detalle y compromiso con la calidad hacen que trabajar con ella sea un verdadero placer.”
@@ -107,7 +109,6 @@ initial-scale=1.0">
             internacionales, resaltando su habilidad para traducir requerimientos técnicos en soluciones intuitivas.</p>
         </footer>
       </article>
-
       <article>
         <blockquote>
           “Danna tiene una energía contagiosa y una ética de trabajo admirable. Siempre supera las expectativas.”
@@ -118,7 +119,6 @@ initial-scale=1.0">
             web, demostrando empatía, liderazgo y una gran capacidad para enseñar a otros.</p>
         </footer>
       </article>
-
     </section>
     <section>
       <h2>Presentación en video</h2>
@@ -131,52 +131,59 @@ initial-scale=1.0">
     </section>
     <section>
       <h2>Formulario de contacto</h2>
-
       <form action="/enviar" method="post">
-
         <label for="nombre">Nombre completo:</label>
         <input type="text" id="nombre" name="nombre" required>
-
         <label for="motivo">Motivo de contacto:</label>
         <select id="motivo" name="motivo">
           <option value="entrevista">Entrevista laboral</option>
           <option value="colaboracion">Colaboración en proyecto</option>
           <option value="consulta">Consulta general</option>
         </select>
-
         <fieldset>
           <legend>¿Cómo prefieres que te contacte?</legend>
           <label><input type="radio" name="contacto" value="email" checked> Email</label>
           <label><input type="radio" name="contacto" value="telefono"> Teléfono</label>
           <label><input type="radio" name="contacto" value="whatsapp"> WhatsApp</label>
         </fieldset>
-
         <fieldset>
           <legend>Áreas de interés:</legend>
           <label><input type="checkbox" name="intereses" value="desarrollo"> Desarrollo web</label>
           <label><input type="checkbox" name="intereses" value="visualizacion"> Visualización de datos</label>
           <label><input type="checkbox" name="intereses" value="educacion"> Educación tecnológica</label>
         </fieldset>
-
         <label for="mensaje">Mensaje:</label>
         <textarea id="mensaje" name="mensaje" rows="5" cols="40" placeholder="Escribe tu mensaje aquí..."></textarea>
-
         <button type="submit">Enviar formulario</button>
-
       </form>
     </section>
 
-
-
-
+    <!-- ASIDE DENTRO DEL BODY -->
+    <aside>
+      <h2>Ubicación ESPOL</h2>
+      <div class="contacto">
+        <div id="map" style="height: 300px; border-radius: 8px;"></div>
+        <p>📍 Campus Gustavo Galindo, Km. 30.5 Vía Perimetral, Guayaquil - Ecuador</p>
+      </div>
+      <h2>Imagen Placeholder</h2>
+      <img id="photo" src="https://picsum.photos/300/300?random=1" alt="Foto de placeholder aleatoria">
+    </aside>
   </main>
+
   <footer>
     <p>© Danna Ayala - 2025</p>
     <ul>
       <li><a href="https://www.linkedin.com/in/tunombre">LinkedIn</a></li>
       <li><a href="https://github.com/ayaladanna04">GitHub</a></li>
     </ul>
+    <address>
+      Si quieres contactar con el autor, escribe a <span>danaayal@espol.edu.ec</span>.
+    </address>
   </footer>
+
+  <!-- Scripts al final del body -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
